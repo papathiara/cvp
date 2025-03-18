@@ -1367,6 +1367,20 @@
                 bottom: 60px;
     }
 }
+
+        /* Style pour le logo Django */
+        .django-logo {
+            width: 80px;
+            height: auto;
+            filter: brightness(0) saturate(100%) invert(15%) sepia(98%) saturate(7458%) hue-rotate(358deg) brightness(97%) contrast(112%);
+            margin-bottom: 0.8rem;
+            transition: var(--transition);
+        }
+
+        .skill-item:hover .django-logo {
+            transform: scale(1.2);
+            filter: brightness(0) saturate(100%) invert(15%) sepia(98%) saturate(7458%) hue-rotate(358deg) brightness(97%) contrast(112%) drop-shadow(0 0 10px var(--primary-color));
+        }
     </style>
 </head>
 <body>
@@ -1648,7 +1662,7 @@
                     <h3>Frameworks et Outils</h3>
                     <div class="skills-grid">
                         <div class="skill-item">
-                            <i class="fab fa-django skill-icon"></i>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Django_logo.svg" alt="Django" class="django-logo">
                             <span class="skill-name">Django</span>
                         </div>
                       <div class="skill-item">
