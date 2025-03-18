@@ -131,7 +131,7 @@
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
-
+        
         .header-content {
             position: relative;
             z-index: 5;
@@ -163,7 +163,7 @@
             border: 1px solid rgba(255, 0, 0, 0.4);
             background: rgba(51, 0, 0, 0.7);
         }
-
+        
         .profile-container {
             display: flex;
             align-items: center;
@@ -171,7 +171,7 @@
             flex-wrap: wrap;
             justify-content: center;
         }
-
+        
         .profile-img {
             width: 220px;
             height: 220px;
@@ -196,7 +196,7 @@
                             inset 0 0 30px rgba(255, 0, 0, 0.5);
                 transform: scale(1.02);
             }
-            100% { 
+            100% {
                 box-shadow: 0 0 0 0 rgba(255, 0, 0, 0),
                             inset 0 0 20px rgba(255, 0, 0, 0.3);
                 transform: scale(1);
@@ -210,7 +210,7 @@
                 0 0 40px rgba(255, 0, 0, 0.5),
                 inset 0 0 30px rgba(255, 0, 0, 0.5);
         }
-
+        
         .profile-text {
             flex: 1;
             min-width: 300px;
@@ -227,7 +227,7 @@
                 transform: translateX(0);
             }
         }
-
+        
         .profile-text h1 {
             font-size: 3.5rem;
             margin: 0;
@@ -272,7 +272,7 @@
                 opacity: 1;
             }
         }
-
+        
         .profile-text p {
             font-size: 1.6rem;
             margin: 25px 0;
@@ -282,7 +282,7 @@
             animation: fadeIn 1.5s ease-out 0.6s both;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
-
+        
         .contact-info {
             display: flex;
             flex-wrap: wrap;
@@ -290,7 +290,7 @@
             margin-top: 30px;
             animation: fadeInUp 1s ease-out 0.9s backwards;
         }
-
+        
         .contact-item {
             background: rgba(255, 0, 0, 0.1);
             padding: 12px 20px;
@@ -303,14 +303,14 @@
             backdrop-filter: blur(5px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
-
+        
         .contact-item:hover {
             background: rgba(255, 0, 0, 0.2);
             transform: translateY(-3px) scale(1.02);
             box-shadow: 0 8px 20px rgba(255, 0, 0, 0.3);
             border-color: rgba(255, 0, 0, 0.4);
         }
-
+        
         .contact-item i {
             color: #ff3333;
             font-size: 1.3rem;
@@ -333,7 +333,7 @@
             color: #ff3333;
             text-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
         }
-
+        
         /* Navigation */
         nav {
             background-color: rgba(25, 25, 25, 0.95);
@@ -994,7 +994,7 @@
             position: relative;
             z-index: 2;
         }
-
+        
         .footer-section {
             display: flex;
             flex-direction: column;
@@ -1083,7 +1083,7 @@
         .social-link:hover i {
             transform: scale(1.2);
         }
-
+        
         .copyright {
             text-align: center;
             padding-top: 2rem;
@@ -1205,12 +1205,12 @@
         }
 
         /* Styles pour les animations */
-        #particles-js {
+#particles-js {
             position: fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
             z-index: 1;
             pointer-events: none;
         }
@@ -1235,7 +1235,7 @@
 
         /* Effet de lueur sur les cartes */
         .glass-card {
-            position: relative;
+    position: relative;
             overflow: hidden;
         }
 
@@ -1305,16 +1305,16 @@
         }
 
         .download-cv:hover {
-            transform: translateY(-3px);
+    transform: translateY(-3px);
             box-shadow: 0 8px 25px rgba(229, 9, 20, 0.3);
             background: linear-gradient(135deg, #ffffff, #f0f0f0);
             color: var(--primary-dark);
             border-color: var(--primary-dark);
-        }
+}
 
         .download-cv i {
             margin-right: 10px;
-            font-size: 1.2rem;
+    font-size: 1.2rem;
             color: var(--primary-color);
             transition: all 0.4s ease;
         }
@@ -1322,6 +1322,51 @@
         .download-cv:hover i {
             color: var(--primary-dark);
         }
+
+        /* Style pour la flèche de scroll */
+        .scroll-arrow {
+            position: fixed;
+            bottom: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 2.5rem;
+            cursor: pointer;
+            animation: bounce 2s infinite;
+            z-index: 99;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+            padding: 15px 30px;
+            background: linear-gradient(to top, rgba(229, 9, 20, 0.3), transparent);
+            border-radius: 50px;
+            text-align: center;
+        }
+
+        .scroll-arrow:hover {
+            opacity: 1;
+            transform: translateX(-50%) translateY(5px);
+            background: linear-gradient(to top, rgba(229, 9, 20, 0.5), transparent);
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-20px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .scroll-arrow {
+                font-size: 2rem;
+                padding: 10px 20px;
+                bottom: 60px;
+    }
+}
     </style>
 </head>
 <body>
@@ -1331,7 +1376,7 @@
         <div class="container">
             <div class="header-content">
                 <div class="profile-container">
-                    <img src="https://i.imgur.com/Ueb02Q7.png" alt="Photo de Papa Thiara Diome" class="profile-img">
+<img src="https://i.imgur.com/Ueb02Q7.png" alt="Photo de Papa Thiara Diome" class="profile-img">
 
                     <div class="profile-text">
                         <h1>Papa Thiara Diome</h1>
@@ -1356,6 +1401,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="scroll-arrow" onclick="scrollToAbout()">
+                <i class="fas fa-chevron-down"></i>
             </div>
         </div>
     </header>
@@ -1706,13 +1754,13 @@
                 </div>
                 <div class="footer-section">
                     <h3>Réseaux Sociaux</h3>
-                    <div class="social-links">
+                <div class="social-links">
                         <a href="https://www.linkedin.com/in/papa-thiara-diome-869bab352" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                         <a href="https://github.com/papathiara" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
                         <a href="https://x.com/eldiomsfbi?s=11" class="social-link" target="_blank"><i class="fab fa-twitter"></i></a>
                         <a href="mailto:thiaradiome@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
-                    </div>
                 </div>
+            </div>
             </div>
             <p class="copyright">&copy; 2024 Papa Thiara Diome. Tous droits réservés.</p>
         </div>
@@ -1804,6 +1852,19 @@
             retina_detect: true
         });
 
+        // Gestion de la flèche de scroll
+        const scrollArrow = document.querySelector('.scroll-arrow');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                scrollArrow.style.opacity = '0';
+                scrollArrow.style.pointerEvents = 'none';
+            } else {
+                scrollArrow.style.opacity = '0.8';
+                scrollArrow.style.pointerEvents = 'auto';
+            }
+        });
+
         // Effet de parallaxe subtil
         document.addEventListener('mousemove', function(e) {
             const moveX = (e.clientX * 0.005);
@@ -1881,6 +1942,12 @@
                 }
             });
         });
+
+        // Fonction pour scroller vers la section À propos
+        function scrollToAbout() {
+            const aboutSection = document.getElementById('a-propos');
+            aboutSection.scrollIntoView({ behavior: 'smooth' });
+        }
     </script>
 </body>
 </html>
